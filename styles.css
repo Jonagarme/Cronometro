@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'lato';
+}
+
+:root {
+    --background: rgb(255, 255, 255);
+    --background-linear1: rgb(255,255,255,1);
+    --background-linear2: rgb(255,235,130,1);
+    --container: #353535;
+    --text-color: white;
+    --screen: #353535;
+    --btn-hover: black;
+    --btn-hover-text: #fff56d;
+    --shadow: rgba(59,59,59,59,0.75);
+}
+
+span {
+    font-weight: 300;
+    font-size: 100px;
+}
+
+.c-body {
+    background: var(--background);
+    background: linear-gradient(135deg, var(--background-linear1) 0%, var(--background-linear2) 70%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-time{
+    background-color: var(--container);
+    width: 600px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 11px 17px 22px 0 var(--shadow); 
+}
+
+.c-time>.screen {
+    color: var(--text-color);
+    background-color: var(--screen);
+    margin: 6px;
+    text-align: center;
+}
+
+.c-btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    margin: 15px 100px;
+}
+.c-btn>button{
+    display: block;
+    background: none;
+    border: none;
+    outline: inherit;
+    cursor: pointer;
+    height: 80px;
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 50px;
+}
+
+button:hover {
+    transform: scale(1.2);
+    transform: 0.5s;
+    background-color: var(--btn-hover);
+    color: var(--btn-hover-text);
+}
+
+
+@media screen and (min-width:360px) and (max-width:640px){
+   .c-body{
+       width: auto;
+   }
+   .c-time{
+       width: 90%;
+       height: 180px;
+   }
+   span{
+       font-size: 350%;
+   }
+   .c-btn{
+       width: 90%;
+       height: auto;
+       margin-left:10px;
+   }
+    .c-btn>button{
+        width: 100%;
+        height: auto;
+   } 
+   button:hover{
+       width: 60px;
+       height: 60px;
+   }
+}
